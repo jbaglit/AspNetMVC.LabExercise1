@@ -8,7 +8,7 @@
 }
 
 
-<h2>Product List</h2>
+<h2 style="text-align: center">Product List</h2>
 <table style="width:100%">
     <tr class="tableHead">
     <td>Id</td>
@@ -16,7 +16,7 @@
     <td>Description</td>
     <td>Quantity</td>
     <td>Price</td>
-    <td>Total Price</td>
+    <td>Total Amount</td>
     </tr>
     <tr>
         @foreach(var product in productList)
@@ -27,7 +27,7 @@
                 <td>@product.Description</td>
                 <td>@product.Quantity</td>
                 <td style="width:20%">PHP @product.Price</td>
-                <td style="width:20%">PHP @(product.Quantity * @product.Price)</td>
+                <td style="width:20%">PHP @product.TotalAmount</td>
             </tr>  
         }
         <tr class="grandTotal">

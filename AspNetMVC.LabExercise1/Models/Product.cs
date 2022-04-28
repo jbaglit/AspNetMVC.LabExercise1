@@ -7,11 +7,14 @@
         public string Description { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public decimal TotalAmount { get; set; }
-    }
+        public decimal TotalAmount
+        {
+            get => this.Quantity * Price; 
+            set
+            {
+                this.TotalAmount = value;
+            }
 
-    public class GrandTotal
-    {
-        public decimal Total { get; set; }
+        }
     }
 }
